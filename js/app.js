@@ -137,6 +137,7 @@ slider('introducao', 3000);
 
     function animeScroll() {
         var documentTop = $(window).scrollTop();
+        console.log('oi');
         $target.each(function(){
             var itemTop = $(this).offset().top;
             if (documentTop > itemTop - offset) {
@@ -152,5 +153,5 @@ slider('introducao', 3000);
     // Ativando com scroll
     $(document).scroll(debounce(function(){
         animeScroll();
-    }, 200));
+    }, 0));
 })();
